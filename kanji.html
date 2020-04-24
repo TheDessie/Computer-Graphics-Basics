@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+	
+<html>
+	<head>
+		<script src="three.min.js"></script>
+		<script src="kanji.js"></script>
+		<script src="ThreeCSG.js"></script>
+	</head>
+	
+	<body onload="main()">
+		<h1>ф.н. 81423 &ndash; група 2 &ndash; Десислава Димитрова</h1>
+		<script>	
+			
+			var shape1 = new THREE.Shape();
+			shape1.moveTo( -9.3, 8.5);
+			shape1.lineTo( -9.3, 6.9);
+			shape1.lineTo(  -4.5, 6.9 );
+			shape1.lineTo( -4.5, 5.5 );
+			shape1.lineTo(  -2.9, 5.5);
+			shape1.lineTo(  -2.9, 6.9);
+			shape1.lineTo(  3.1, 6.9);
+			shape1.lineTo(  3.1, 6.1);
+			shape1.lineTo( 1.8, 6.1);
+			shape1.lineTo( 1.8,4.9);
+			shape1.lineTo( -3.6,4.9);
+			shape1.lineTo( -3.6,3.4);
+			shape1.lineTo( 1.8,3.4);
+			shape1.lineTo( 1.8,2.7);
+			shape1.lineTo( -2.6,2.7);
+			shape1.lineTo( -2.6,-3.6);
+			shape1.lineTo( 1.8,-3.6);
+			shape1.lineTo( 1.8,-4.4);
+			shape1.lineTo( -4,-4.4);
+			shape1.lineTo( -4,-5.9);
+			shape1.lineTo( 1.8,-5.9);
+			shape1.lineTo( 1.8,-7.5);
+			shape1.lineTo( 3.5,-7.5);
+			shape1.lineTo( 3.5,-5.9);
+			shape1.lineTo( 9.5,-5.9);
+			shape1.lineTo( 9.5,-4.4);
+			shape1.lineTo( 3.5,-4.4);
+			shape1.lineTo( 3.5,-3.6);
+			shape1.lineTo( 8.1,-3.6);
+			shape1.lineTo( 8.1,2.7);
+			shape1.lineTo( 3.5,2.7);
+			shape1.lineTo( 3.5,3.4);
+			shape1.lineTo(  9,3.4 );
+			shape1.lineTo( 9,4.9);
+			shape1.lineTo( 3.5,4.9);
+			shape1.lineTo( 3.5,5.55);
+			shape1.lineTo( 4.7,5.55);
+			shape1.lineTo(  4.7, 6.9);
+			shape1.lineTo(  9.5, 6.9);
+			shape1.lineTo(  9.5, 8.5);
+			shape1.lineTo(  4.7, 8.5);
+			shape1.lineTo(  4.7, 10);
+			shape1.lineTo(  3.1, 10);
+			shape1.lineTo(  3.1, 8.5);
+			shape1.lineTo(  -2.9, 8.5);
+			shape1.lineTo(  -2.9, 10);
+			shape1.lineTo(  -4.5, 10);
+			shape1.lineTo(  -4.5, 8.5);
+			shape1.lineTo(  -9.3, 8.5);
+			
+			var hole1 = new THREE.Path();
+			hole1.moveTo( -1,1.2);
+			hole1.lineTo( 1.8,1.2);
+			hole1.lineTo( 1.8,0.5);
+			hole1.lineTo( -1,0.5);
+			hole1.lineTo( -1,1.2);
+			
+			var hole2 = new THREE.Path();
+			hole2.moveTo( 3.5,1.2);
+			hole2.lineTo( 6.4,1.2);
+			hole2.lineTo( 6.4,0.5);
+			hole2.lineTo( 3.5,0.5);
+			hole2.lineTo( 3.5,1.2);
+			
+			var hole3 = new THREE.Path();
+			hole3.moveTo( -1,-1.1);
+			hole3.lineTo( 1.8,-1.1);
+			hole3.lineTo( 1.8,-2.1);
+			hole3.lineTo( -1,-2.1);
+			hole3.lineTo( -1,-1.1);
+			
+			var hole4 = new THREE.Path();
+			hole4.moveTo( 3.5,-1.1);
+			hole4.lineTo( 6.4,-1.1);
+			hole4.lineTo( 6.4,-2.1);
+			hole4.lineTo( 3.5,-2.1);
+			hole4.lineTo( 3.5,-1.1);
+			
+			shape1.holes.push(hole1, hole2, hole3, hole4);
+
+			var shape2 = new THREE.Shape();
+			shape2.moveTo( -8.1,5.8);
+			shape2.quadraticCurveTo( -6.3, 4.9, -4.9, 2.85);
+			shape2.lineTo( -6.2,1.6);
+			shape2.quadraticCurveTo( -7.4, 3.8, -9.4, 4.8);
+			shape2.lineTo( -8.1,5.8);
+			
+			var shape3 = new THREE.Shape();
+			shape3.moveTo( -9.6,-0.1);
+			shape3.lineTo( -9.6,-1.7);
+			shape3.lineTo( -6.8,-1.7);
+			shape3.lineTo( -6.8,-6.25);
+			shape3.quadraticCurveTo( -7.2, -6.7, -7.65, -7);
+			shape3.lineTo( -10,-8.65);
+			shape3.lineTo( -8.75,-10);
+			shape3.lineTo( -6.1,-7.7);
+			shape3.quadraticCurveTo( -4.4, -9.4, -2, -9.4);
+			shape3.lineTo( 9.4,-9.4);
+			shape3.lineTo( 10,-7.5);
+			shape3.quadraticCurveTo( 9.5, -7.8, 7.75, -7.8);
+			shape3.lineTo( -1,-7.8);
+			shape3.quadraticCurveTo( -3.7, -7.8, -5.2, -6.4);
+			shape3.lineTo( -5.2,-0.1);
+			shape3.lineTo( -9.6,-0.1);
+		
+			var triangle1 = new THREE.Shape();
+			triangle1.moveTo(-11,11);
+			triangle1.lineTo(11,-11);
+			triangle1.lineTo(11,11);
+			triangle1.lineTo(-11,11);
+	
+			var triangle2 = new THREE.Shape();
+			triangle2.moveTo(-11,11);
+			triangle2.lineTo(11,-11);
+			triangle2.lineTo(-11,-11);
+			triangle2.lineTo(-11,11);
+
+			
+			var material = new THREE.MeshPhongMaterial({color:'gray',shininess:100});
+			var extrudeSettings = { amount: 10, bevelEnabled: false, bevelSegments: 2, steps: 2, bevelSize: 0.1, bevelThickness: 0.1 };
+			
+			var shape1Geom = new THREE.ExtrudeGeometry( shape1, extrudeSettings );
+			var shape2Geom = new THREE.ExtrudeGeometry( shape2, extrudeSettings );
+			var shape3Geom = new THREE.ExtrudeGeometry( shape3, extrudeSettings );
+			var triangle1Geom = new THREE.ExtrudeGeometry( triangle1, extrudeSettings );
+			var triangle2Geom = new THREE.ExtrudeGeometry( triangle2, extrudeSettings );
+		
+			var bspShape1 = new ThreeBSP(shape1Geom);
+			var bspShape2 = new ThreeBSP(shape2Geom);
+			var bspShape3 = new ThreeBSP(shape3Geom);
+			var bspTriangle1 = new ThreeBSP(triangle1Geom);
+			var bspTriangle2 = new ThreeBSP(triangle2Geom);
+			
+			//part1
+			
+			var bspKanji1 = bspShape1.union(bspShape3).subtract(bspTriangle2);
+			
+			var kanji1 = bspKanji1.toMesh(material);
+			kanji1.position.set(0, 0, -5);
+
+			part1.add(kanji1);
+			
+			//part2
+			
+			var bspKanji2 = bspShape1.union(bspShape2).union(bspShape3).subtract(bspTriangle1);
+			
+			var kanji2 = bspKanji2.toMesh(material);
+			kanji2.position.set(0, 0, -5);
+			
+			part2.add(kanji2);
+
+
+		</script>
+	</body>
+</html>
+
